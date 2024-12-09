@@ -30,4 +30,4 @@ const bookSchema = new mongoose.Schema(
   { timestamps: true }
 ); // Add timestamps option
 
-module.exports = mongoose.model("Books", bookSchema); 
+module.exports = mongoose.model("Books", bookSchema);

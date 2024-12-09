@@ -3,7 +3,7 @@ const orderModel = require("../../models/orderModel");
 //Total orders
 module.exports.totalOrders = async (req, res) => {
   try {
-    let limit = req.query.limit || 1;
+    let limit = req.query.limit || 10;
     let page = req.query.page || 1;
     const orders = await orderModel
       .find()

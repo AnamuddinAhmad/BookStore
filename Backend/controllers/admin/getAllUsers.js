@@ -4,7 +4,7 @@ module.exports.getUsers = async (req, res) => {
   try {
     //Perfoming Pagination
     const page = parseInt(req.query.page) || 1;
-    const limit = parseInt(req.query.limit) || 2;
+    const limit = parseInt(req.query.limit) || 10;
 
     //Findig total user and ignoring password field.
     //And skip work which post is alrady fetched and then next time it will ignore them and limit find document only till limit.

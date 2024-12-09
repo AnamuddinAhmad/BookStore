@@ -32,19 +32,19 @@ const userSchema = new mongoose.Schema(
     },
     favourites: [
       {
-        type: mongoose.Types.ObjectId,
-        ref: "Book", 
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Books", 
       },
     ],
     cart: [
       {
-        type: mongoose.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "Books", 
       },
     ],
     orders: [
       {
-        type: mongoose.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: "Order", // Ensure it matches the Order model name
       },
     ],
