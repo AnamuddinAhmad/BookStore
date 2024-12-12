@@ -3,24 +3,16 @@
   "version": "1.0.0",
   "description": "A bookstore project built using the MERN stack",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"No tests specified\"",
-    "prepare": "husky install",
-    "lint": "eslint frontend/**/*.js backend/**/*.js",
-    "eslint": "eslint ."
+    "test": "echo \"No tests specified\""
   },
-  "keywords": ["bookstore", "mern", "nodejs", "react"],
+  "keywords": [
+    "bookstore",
+    "mern",
+    "nodejs",
+    "react"
+  ],
   "author": "Anamuddin Ahmad",
-  "license": "ISC",
-  "devDependencies": {
-    "@eslint/js": "^9.16.0",
-    "eslint": "^9.16.0",
-    "eslint-plugin-react": "^7.37.2",
-    "globals": "^15.13.0",
-    "husky": "^9.1.7",
-    "lint-staged": "^15.2.10"
-  },
-  "lint-staged": {
-    "**/*.js": "eslint --fix"
-  }
+  "license": "ISC"
 }

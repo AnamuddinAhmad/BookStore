@@ -1,9 +1,9 @@
 const router = require("express").Router();
 
+const isLogedIn = require("../middlewares/isLogedIn.js");
 const { register } = require("../controllers/user/singup.js");
 const { singin } = require("../controllers/user/singin.js");
 const { logout } = require("../controllers/user/logout.js");
-const isLogedIn = require("../middlewares/isLogedIn.js");
 const { home } = require("../controllers/user/home.js");
 const { updateAddress } = require("../controllers/user/updateAddress.js");
 const { addToCart } = require("../utils/addToCart.js");
@@ -23,5 +23,6 @@ router.patch("/removetocart", isLogedIn, removeToCart);
 router.get("/cart", isLogedIn, cart);
 
 //add to favourate.
+// router.post()
 
 module.exports = router;
