@@ -25,15 +25,19 @@ app.use(
     secret: process.env.JWT_KEY,
     resave: false,
     saveUninitialized: false,
-    cookie: { httpOnly: true, secure: process.env.NODE_ENV === "production" },
+    cookie: {
+      httpOnly: true,
+      secure:
+        process.env.NODE_ENV && process.env.NODE_ENV.trim() === "production",
+    },
   })
 );
 
 app.use(
   cors({
-    origin: "http:localhost:5173",
+    origin: "http://localhost:5173",
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
-    Credential: true,
+    credentials: true,
   })
 );
 
@@ -57,5 +61,5 @@ app.use("/user", userRoute);
 app.use("/admin", isLogedIn, admin);
 
 app.listen(process.env.PORT, () => {
-  console.log("Server is listening on ", process.env.PORT);
+  console.log("Server is listening on port", process.env.PORT);
 });

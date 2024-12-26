@@ -1,11 +1,13 @@
 import React from "react";
+import Login from "./app/Auth/Login";
 
 const App = () => {
   return (
-    <div className="bg-black min-h-screen px-4 py-4">
-      <div className="text-3xl p-4 font-bold underline w-full h-44 bg-[#CDF3E2] rounded-md  shadow-emerald-700 shadow-md  border-2 border-emerald-500 flex justify-between">
-        <h1 className="text-black">Book Store!</h1>
-        <p className="shadow-md shadow-emerald-700 border-2 h-fit border-emerald-700 bg-green-400 p-3 text-sm w-fit rounded-full bg-opacity-30 ">26</p>
+    <div className="bg-gray-100 min-h-screen px-4 py-4">
+      <div className="text-3xl p-4 font-bold underline w-full  bg-[#CDF3E2] rounded-md  shadow-emerald-700 shadow-md  border-2 border-emerald-500 flex justify-between items-center">
+        <h1 className="text-emerald-700">Book Store!</h1>
+       
+      <Login />
       </div>
     </div>
   );

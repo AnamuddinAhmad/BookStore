@@ -12,7 +12,7 @@ const { cart } = require("../utils/cart.js");
 
 //Singup User
 router.post("/singup", register);
-router.post("/singin", singin);
+router.post("/login", singin);
 router.post("/logout", isLogedIn, logout);
 router.get("/home", isLogedIn, home);
 router.put("/update-address", isLogedIn, updateAddress);
