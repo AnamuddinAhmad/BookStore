@@ -11,6 +11,7 @@ router.post("/addbook", isLogedIn, addBook);
 router.put("/updatebook", isLogedIn, updateBook);
 
 router.delete("deletebook", isLogedIn, deleteBook);
+
 const { allBooks } = require("../controllers/admin/allBooks.js");
 const { getUsers } = require("../controllers/admin/getAllUsers.js");
 const { totalOrders } = require("../controllers/admin/totalOrders.js");
